@@ -15,13 +15,12 @@
           <div class="custom-card-text pl-2">
             <div class="title">
               <h5>
-                <strong>This is a title of our beautiful blog</strong>
+                <strong>{{ article.post_title }}</strong>
               </h5>
             </div>
             <div class="pt-2">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et est
-                quos officia po. Lorem ipsum dolor sit amet consectetur..
+                {{ article.post_description }}
               </p>
             </div>
           </div>
@@ -34,6 +33,12 @@
 <script>
 export default {
   name: 'HomeCard',
+  props: {
+    // eslint-disable-next-line vue/require-default-prop
+    article: {
+      type: Object,
+    },
+  },
 }
 </script>
 
